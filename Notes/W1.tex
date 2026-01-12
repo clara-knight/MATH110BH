@@ -1,0 +1,77 @@
+\documentclass{notes}
+\usepackage{myalgebra}
+
+\begin{document}
+\justifying 
+\maketitle
+
+%\tableofcontents
+\section{Week 1}
+\subsection{Rings and examples of rings}
+Consider a field $F$ and a vector space $V$ over $F$.
+Then $\mathcal{L}(V)$ itself is not a vector space:
+If $S$, $T \in \mathcal{L}(V)$ then it is not always the case that 
+$T \circ S = S \circ T$, and it is not the case that for every 
+$T \in \mathcal{L}(V)$ there is a $T^{-1}$ such that
+$T \circ T^{-1} = I$.
+Then $\mathcal{L}(V)$ is a ring:
+
+\begin{defn}[Ring] 
+	A ring $(R, +, \cdot)$ is a set $R$ with two operations,
+	denoted $+$ and $\cdot$ such that
+	for all $a$, $b$, $c$ in $R$:
+	\begin{enumerate}[(i)]
+		\item $(R, +)$ is an abelian group.
+		\item $(ab)c = a(bc)$.
+		\item $a(b+c) = ab+ac$ and $(b+c)a = ba+ca$.
+	\end{enumerate}
+	If $ab = ba$ for all $a$, $b \in R$ then $R$ is a commutative ring. 
+	If $1_{R}a = a = a 1_{R}$ for all $a \in R$ then $R$
+	is a ring with identity.
+\end{defn}
+
+\begin{exmp}
+	$(\Z, +, \cdot)$ is a commutative ring with identity.
+\end{exmp}
+\begin{exmp}
+	$(\mathcal{L}(V), +, \circ)$ is a ring with identity
+\end{exmp}
+
+A nonzero element $a \in R$ is a left (right) zero divisor if there is
+a nonzero element $b \in R$ such that $ab = 0$ ($ba = 0$).
+A zero divisor is both a left and right zero divisor.
+
+An element $a$ in a ring $R$ with identity is said to be left (right)
+invertible if there exists  a $c\in R$ such that $ca = 1_R$ ($ac=1_R$).
+The element $c$ a left (right) inverse of $a$. An element $a \in R$ that
+is both left and right invertible is invertible or a unit.
+
+The set of units in a ring $R$ with identity forms a group under multiplication.
+
+There are rings with identity and inverses that do not commute:
+\begin{exmp}
+	$\mathbb{H}$, the quaternions, is a non-commutative 
+	ring with identity and inverses, also known as
+	division ring or skew field.
+\end{exmp}
+
+Consider $\mathcal{F}(X, R)$, where $X \neq \varnothing$ and
+$R$ is a ring. This is the set of functions from $X$ to $R$.
+Then for $f, g$ we can define addition as 
+$(f+g)(x)  = f(x)+g(x)$ and multiplication as 
+$(f+g)(x)  = f(x)g(x)$. Then $\mathcal{F}(X, R)$ is a ring.
+
+\begin{defn}[Integral domain]
+	A commutative ring $R$ with identity $1_R \neq 0$ and no zero ddivisors
+	is called an integral domain. A ring $D$ with identity  $1_D \neq 0$ in
+	which every nonzero element is a unit is called a division ring.
+	A field is a commutative division ring.
+\end{defn}
+
+\subsection{Ring homomorphisms}
+
+Let $R$, $S$ be rings and $\phi: R \rightarrow S$ a function such that
+for all $a$, $b \in R$,
+$\phi(a+b) = \phi(a) + \phi(b)$ and $\phi(ab)=\phi(a)\phi(b)$.
+
+\end{document}
