@@ -2,7 +2,7 @@
 \RequirePackage{xkeyval}
 
 \def\thishwnumber{}
-\define@key{110BH.cls}{hwnumber}[]{\def\hwnumber{#1}}
+\define@key{110BH.cls}{hw}[]{\def\thishwnumber{#1}}
 
 \ProcessOptionsX
 \LoadClass[

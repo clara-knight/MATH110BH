@@ -1,1 +1,1 @@
-/home/clarabear/school/W26/MATH110BH/110BH.cls
+../110BH.cls
